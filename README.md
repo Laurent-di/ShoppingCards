@@ -1,4 +1,4 @@
-###DEPLOY
+### DEPLOY 
 1\. Go to the `client` folder and install dependencies:
 ```text
 cd client/
@@ -13,7 +13,7 @@ npm run build
 cd ../server/
 npm i
 ```
-###START APPLICATION
+### START APPLICATION
 1\. Run next command in the `server` folder:
 ```text
 npm start
