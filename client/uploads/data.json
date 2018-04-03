@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Pen",
+    "category": "Office",
+    "price": 4.77,
+    "description": "Pen, paper, printer"
+  },
+  {
+    "name": "Notebook",
+    "category": "School",
+    "price": 10.58,
+    "description": "Copybook, pencil, diary"
+  },
+  {
+    "name": "Ticket",
+    "category": "Theatre",
+    "price": 25.58,
+    "description": "Ticket"
+  },
+  {
+    "name": "T-shirt",
+    "category": "Shop",
+    "price": 230.15,
+    "description": "Trousers, socks"
+  },
+  {
+    "name": "Chair",
+    "category": "Home",
+    "price": 15.99,
+    "description": "Blanket, pillows, chairs"
+  }
+]

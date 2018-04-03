@@ -1,0 +1,7 @@
+body {
+    background-color: #ffd093;
+}
+
+:local(.padd) {
+    padding: 20px;
+}

@@ -1,0 +1,155 @@
+$bg-color: orange;
+*{
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+body {
+  background: $bg-color;
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  &__title{
+    color: #000 !important;
+  }
+}
+
+.row{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper{
+  height: 100%;
+  &__logo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 5px;
+  }
+}
+
+.main__content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__card{
+    width: 20em;
+    margin: 10px;
+    height: 350px;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 4px;
+    position: relative;
+    background-color: rgba(255,255,255,0.65);
+    &__image{
+      display: flex;
+      justify-content: center;
+      padding-top: 5%;
+      img{
+        border: 1px solid #808080;
+        height: 175px;
+        width: 185px;
+      }
+    }
+    &__close{
+      position: absolute !important;
+      top: -8px;
+      right: -8px;
+    }
+    &__list__item{
+      display: flex;
+      flex-wrap:wrap;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      flex-direction: row;
+      &__title{
+        padding-left: 5%;
+        &__name{
+          padding-left: 3.4em;
+        }
+      }
+      &__category{
+        padding-left: 2em;
+      }
+      &__price{
+        padding-left: 3.8em;
+      }
+      &__description{
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  &__counter {
+    flex: 0.5 1 2%;;
+    min-width: auto;
+    &__sum {
+      display: inherit;
+      padding: 5px;
+    }
+    &__amount {
+      display: inherit;
+      padding: 5px;
+    }
+    &__average{
+      display: inherit;
+      padding: 5px;
+    }
+  }
+}
+
+.fields{
+  margin: 0 auto;
+  max-width: 260px;
+  padding-top: 50px;
+    &__inputs{
+      margin: 0 auto;
+      flex: 0.3 1 5%;
+      &__button{
+        display: flex;
+        justify-content: center;
+      }
+    }
+}
+
+@media(min-width: 768px){
+  .main__content__card{
+    flex-basis: 20em;
+  }
+}
+
+@media(min-width: 992px){
+  .main__content__card{
+    flex-basis: 20em;
+  }
+}
+
+@media(min-width: 1200px){
+  .main__content__card{
+    flex-basis: 16em;
+  }
+}
