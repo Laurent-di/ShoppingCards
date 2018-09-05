@@ -5,7 +5,7 @@ import HeaderBar from './HeaderBar';
 import GridListCards from './GridListCards';
 import AddItem from './AddItem';
 import FooterBar from './FooterBar';
-import data from '../uploads/data.json';
+import data from '../public/data.json';
 
 import './scss/stylesheet.scss';
 
@@ -27,6 +27,7 @@ class App extends React.Component {
 		};
 		this.removeItem = this._removeItem.bind(this);
 		this.removeAll = this._removeAll.bind(this);
+		this.addItemHandler = this._addItemHandler.bind(this);
 	}
 
 	componentWillMount() {
@@ -61,16 +62,31 @@ class App extends React.Component {
 		localStorage.setItem('content', JSON.stringify(cards));
 	}
 
+	_addItemHandler(item){debugger;
+		const cards = this.state.content;
+		cards.push(item);
+
+		console.log('this is cards', cards);
+		// console.log('this is argument', item);
+
+		this.setState({content: this.state.content});
+		localStorage.setItem('content', JSON.stringify(cards));
+	}
+
 	render() {
 		return (
 			<MuiThemeProvider>
 				<div className='wrapper'>
 					<HeaderBar/>
-					<GridListCards
+					{/*<GridListCards*/}
+						{/*items={this.state.content}*/}
+						{/*removeItem={this.removeItem}*/}
+					{/*/>*/}
+					<AddItem
+						categories={Categories}
 						items={this.state.content}
-						removeItem={this.removeItem}
+						addItemHandler={this.addItemHandler}
 					/>
-					{/*<AddPage items={Categories} />*/}
 					<FooterBar
 						items={this.state.content}
 						removeAll={this.removeAll}
