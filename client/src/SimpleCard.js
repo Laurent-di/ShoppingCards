@@ -7,10 +7,10 @@ class SimpleCard extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.handleDeleteCart = this.handleDeleteCart.bind(this);
+		this.handleDeleteCart = this._handleDeleteCart.bind(this);
 	}
 
-	handleDeleteCart() {
+	_handleDeleteCart() {
 		let index = parseInt(this.props.index);
 		this.props.removeItem(index);
 	}

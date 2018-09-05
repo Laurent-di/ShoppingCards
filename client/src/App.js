@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import HeaderBar from './HeaderBar';
 import GridListCards from './GridListCards';
-import AddPage from './AddPage';
+import AddItem from './AddItem';
 import FooterBar from './FooterBar';
 import data from '../uploads/data.json';
 
@@ -25,8 +25,8 @@ class App extends React.Component {
 		this.state = {
 			content: [],
 		};
-		this.removeItem = this.removeItem.bind(this);
-		this.removeAll = this.removeAll.bind(this);
+		this.removeItem = this._removeItem.bind(this);
+		this.removeAll = this._removeAll.bind(this);
 	}
 
 	componentWillMount() {
@@ -44,7 +44,7 @@ class App extends React.Component {
 	}
 
 
-	removeItem(itemIndex) {
+	_removeItem(itemIndex) {
 		const cards = this.state.content;
 		cards.splice(itemIndex, 1);
 
@@ -53,7 +53,7 @@ class App extends React.Component {
 
 	}
 
-	removeAll() {
+	_removeAll() {
 		const cards = this.state.content;
 		cards.splice(0);
 

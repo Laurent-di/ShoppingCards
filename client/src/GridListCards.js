@@ -9,8 +9,11 @@ class GridListCards extends React.Component {
 				<div className='main__content'>
 					{this.props.items.map((item, index) => {
 						return (
-							<SimpleCard key={index} data={item} index={index}
-													removeItem={this.props.removeItem}
+							<SimpleCard
+								key={index}
+								data={item}
+								index={index}
+								removeItem={this.props.removeItem}
 							/>
 						)
 					})}

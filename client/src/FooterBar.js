@@ -13,10 +13,9 @@ class FooterBar extends React.Component {
 			sumPrices: 0,
 			avgPrice: 0
 		};
-		this._initProps = this._initProps.bind(this);
 	}
 
-	_initProps() {
+	initProps() {
 		let items = this.props.items;
 		let numberOfItems = items.length;
 		let sumPrices = 0;
@@ -37,11 +36,11 @@ class FooterBar extends React.Component {
 	}
 
 	componentWillMount() {
-		this._initProps();
+		this.initProps();
 	}
 
 	componentWillReceiveProps() {
-		this._initProps();
+		this.initProps();
 	}
 
 	render() {
